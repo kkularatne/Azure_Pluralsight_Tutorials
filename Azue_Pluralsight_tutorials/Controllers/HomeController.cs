@@ -5,14 +5,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Azue_Pluralsight_tutorials.Models;
+using Microsoft.Extensions.Configuration;
 
 namespace Azue_Pluralsight_tutorials.Controllers
 {
     public class HomeController : Controller
     {
+        public IConfiguration Configuration { get; }
+
+        public HomeController(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
         public IActionResult Index()
         {
-            return View();
+            var model = Configuration["Greetings"];
+            return View("Index", model);
         }
 
         public IActionResult About()
