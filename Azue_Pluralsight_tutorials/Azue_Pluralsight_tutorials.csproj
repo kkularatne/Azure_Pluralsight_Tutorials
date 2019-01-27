@@ -3,12 +3,19 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <UserSecretsId>aspnet-Azue_Pluralsight_tutorials-8D814935-A85E-4D8B-9FFC-CED4D27A605B</UserSecretsId>
+    <ApplicationInsightsResourceId>/subscriptions/f6ada3cd-d218-47ee-820d-b7526b08c82f/resourcegroups/myFirstWebApp-kasun/providers/microsoft.insights/components/myFirstWebApp-kasun</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/f6ada3cd-d218-47ee-820d-b7526b08c82f/resourcegroups/myFirstWebApp-kasun/providers/microsoft.insights/components/myFirstWebApp-kasun</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.6" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 
 </Project>

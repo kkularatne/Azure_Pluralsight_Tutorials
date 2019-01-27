@@ -23,6 +23,11 @@ namespace Azue_Pluralsight_tutorials.Controllers
             return View("Index", model);
         }
 
+        public IActionResult Test()
+        {
+            throw new InvalidOperationException("Sorry, This function is not yet available");
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
